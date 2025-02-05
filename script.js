@@ -1,4 +1,4 @@
-// Add this file to the 'js' directory
+// Add this file to the 'js' directory as app.js
 
 document.addEventListener("DOMContentLoaded", function() {
     updateLoveTimer();
@@ -14,9 +14,18 @@ function updateLoveTimer() {
 }
 
 function openLetter(day) {
+    const today = new Date().getDate();
+    if (day > today) {
+        alert("This letter is locked! Wait for the correct day.");
+        return;
+    }
     const letter = document.getElementById(`letter${day}`);
     letter.style.display = "block";
-    letter.classList.add("slideDown");
+}
+
+function closeLetter(day) {
+    const letter = document.getElementById(`letter${day}`);
+    letter.style.display = "none";
 }
 
 let currentTrack = 0;
