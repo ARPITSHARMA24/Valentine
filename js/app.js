@@ -1,10 +1,8 @@
 
 // JavaScript for Valentine's website functionalities
-document.addEventListener("DOMContentLoaded", function () {
-    alert("JavaScript Loaded!");
-});
 
 document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("playButton").addEventListener("click", playMusic);
     const envelopes = document.querySelectorAll(".envelope");
     const letters = document.querySelectorAll(".letter-content");
     const closeButtons = document.querySelectorAll(".close");
