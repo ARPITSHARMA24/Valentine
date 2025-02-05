@@ -72,6 +72,21 @@ document.addEventListener("DOMContentLoaded", function () {
         const days = Math.floor(difference / (1000 * 60 * 60 * 24));
         document.getElementById("love-timer").innerText = `Together for ${days} days`;
     }
+    
+    function togglePlayPause() {
+    let audio = document.getElementById("backgroundMusic");
+    if (!audio) {
+        console.error("Audio element not found.");
+        return;
+    }
+
+    if (audio.paused) {
+        audio.play();
+    } else {
+        audio.pause();
+    }
+}
+
     updateLoveTimer();
     setInterval(updateLoveTimer, 1000 * 60 * 60);
 });
