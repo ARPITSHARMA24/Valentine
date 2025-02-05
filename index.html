@@ -12,26 +12,61 @@
         <h1 class="title">Happy Valentine's Week, My Love!</h1>
         <div class="love-timer" id="love-timer"></div>
         
-        <!-- Envelope Section -->
+        <!-- Envelopes for each day -->
         <div class="envelope-container">
-            <!-- Generate envelopes dynamically using JavaScript -->
-        </div>
-
-        <!-- Letter Content Section -->
-        <div class="letter-wrapper">
-            <div id="letter" class="letter-content">
-                <div class="close" onclick="closeLetter()">&times;</div>
-                <img id="polaroid" class="polaroid" src="" alt="Memory Photo">
-                <p id="letter-text"></p>
+            <!-- Seven envelopes for 7 days -->
+            <div class="envelope" onclick="openLetter(1)">
+                <div class="lid"></div>
+                <div class="body"></div>
+                <p>Day 1</p>
+            </div>
+            <div class="envelope" onclick="openLetter(2)">
+                <div class="lid"></div>
+                <div class="body"></div>
+                <p>Day 2</p>
+            </div>
+            <div class="envelope" onclick="openLetter(3)">
+                <div class="lid"></div>
+                <div class="body"></div>
+                <p>Day 3</p>
+            </div>
+            <div class="envelope" onclick="openLetter(4)">
+                <div class="lid"></div>
+                <div class="body"></div>
+                <p>Day 4</p>
+            </div>
+            <div class="envelope" onclick="openLetter(5)">
+                <div class="lid"></div>
+                <div class="body"></div>
+                <p>Day 5</p>
+            </div>
+            <div class="envelope" onclick="openLetter(6)">
+                <div class="lid"></div>
+                <div class="body"></div>
+                <p>Day 6</p>
+            </div>
+            <div class="envelope" onclick="openLetter(7)">
+                <div class="lid"></div>
+                <div class="body"></div>
+                <p>Day 7</p>
             </div>
         </div>
+
+        <!-- Letters for each day -->
+        <div id="letter1" class="letter-content"> <div class="close" onclick="closeLetter(1)">&times;</div> <p>My dearest Swati, ...</p></div>
+        <div id="letter2" class="letter-content"> <div class="close" onclick="closeLetter(2)">&times;</div> <p>Day 2 letter ...</p></div>
+        <div id="letter3" class="letter-content"> <div class="close" onclick="closeLetter(3)">&times;</div> <p>Day 3 letter ...</p></div>
+        <div id="letter4" class="letter-content"> <div class="close" onclick="closeLetter(4)">&times;</div> <p>Day 4 letter ...</p></div>
+        <div id="letter5" class="letter-content"> <div class="close" onclick="closeLetter(5)">&times;</div> <p>Day 5 letter ...</p></div>
+        <div id="letter6" class="letter-content"> <div class="close" onclick="closeLetter(6)">&times;</div> <p>Day 6 letter ...</p></div>
+        <div id="letter7" class="letter-content"> <div class="close" onclick="closeLetter(7)">&times;</div> <p>Day 7 letter ...</p></div>
     </div>
     
     <!-- Music Player -->
     <div class="music-player">
-        <audio id="audio-player" controls></audio>
+        <audio id="audio-player"></audio>
         <button onclick="prevTrack()">⏮</button>
-        <button id="playButton" onclick="togglePlayPause()">Play/Pause</button>
+        <button id="playButton" onclick="togglePlayPause()">▶</button>
         <button onclick="nextTrack()">⏭</button>
     </div>
 </body>
