@@ -1,8 +1,6 @@
-/* Updated CSS for Valentine's website */
-
 body {
     font-family: 'Dancing Script', cursive;
-    background: url('romantic-bg.jpg') no-repeat center center fixed;
+    background: url('../css/romantic-bg.jpg') no-repeat center center fixed;
     background-size: cover;
     text-align: center;
     padding: 20px;
@@ -36,7 +34,7 @@ body {
 .envelope {
     width: 150px;
     height: 120px;
-    background: url('envelope-closed.png') no-repeat center center;
+    background: url('../css/envelope-closed.png') no-repeat center center;
     background-size: cover;
     cursor: pointer;
     position: relative;
@@ -45,15 +43,6 @@ body {
 
 .envelope:hover {
     transform: scale(1.1);
-}
-
-.heart {
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 28px;
-    color: red;
 }
 
 .letter-content {
@@ -86,16 +75,7 @@ body {
     right: 15px;
     font-size: 26px;
     cursor: pointer;
-}
-
-.polaroid {
-    display: block;
-    margin: 0 auto;
-    width: 80%;
-    max-width: 250px;
-    border: 5px solid white;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
-    margin-bottom: 15px;
+    color: red;
 }
 
 .music-player {
@@ -120,4 +100,9 @@ button {
     color: white;
     border-radius: 6px;
     font-size: 16px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #c8236b;
 }
