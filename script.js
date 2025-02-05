@@ -1,3 +1,5 @@
+// Add this file to the 'js' directory
+
 document.addEventListener("DOMContentLoaded", function() {
     updateLoveTimer();
     setInterval(updateLoveTimer, 1000);
@@ -14,6 +16,7 @@ function updateLoveTimer() {
 function openLetter(day) {
     const letter = document.getElementById(`letter${day}`);
     letter.style.display = "block";
+    letter.classList.add("slideDown");
 }
 
 let currentTrack = 0;
