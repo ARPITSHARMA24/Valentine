@@ -36,6 +36,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Close letter event
+    function openLetter() {
+    let letter = document.getElementById("letter");
+    if (!letter) {
+        console.error("Letter element not found.");
+        return;
+    }
+    letter.classList.add("open"); // Assuming you have CSS for an "open" class
+}
+
     closeButtons.forEach((button, index) => {
         button.addEventListener("click", function () {
             letters[index].style.display = "none";
@@ -79,6 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
         console.error("Audio element not found.");
         return;
     }
+        
 
     if (audio.paused) {
         audio.play();
