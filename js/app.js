@@ -1,6 +1,13 @@
 
 // JavaScript for Valentine's website functionalities
-
+document.addEventListener("DOMContentLoaded", function() {
+    const button = document.getElementById("playButton"); // Change ID accordingly
+    if (button) {
+        button.addEventListener("click", playMusic);
+    } else {
+        console.error("Element with ID 'playButton' not found.");
+    }
+});
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("playButton").addEventListener("click", playMusic);
     const envelopes = document.querySelectorAll(".envelope");
