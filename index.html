@@ -1,116 +1,67 @@
+<!-- Add this file to the HTML directory as index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For My Love - Swati</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
+    <title>Valentine's Letters for Swati/Julie</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/app.js"></script>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>My Love for You, Swati</h1>
-            <p id="love-timer"></p>
-        </header>
+    <div class="background">
+        <h1 class="title">Happy Valentine's Week, My Love!</h1>
+        <div class="love-timer" id="love-timer"></div>
         
-        <section class="letters">
-            <!-- Generate 7 envelopes for each day -->
+        <!-- Envelopes for each day -->
+        <div class="envelope-container">
+            <!-- Seven envelopes for 7 days -->
             <div class="envelope" onclick="openLetter(1)">
-                <div class="heart">❤</div>
+                <div class="heart"></div>
                 <p>Day 1</p>
             </div>
-            <div class="letter" id="letter1">
-                <div class="polaroid">
-                    <img src="your-photo-1.jpg" alt="Us Together">
-                </div>
-                <p>My dearest Swati,</p>
-                <p>Here is your love letter for Day 1...</p>
-            </div>
-            
             <div class="envelope" onclick="openLetter(2)">
-                <div class="heart">❤</div>
+                <div class="heart"></div>
                 <p>Day 2</p>
             </div>
-            <div class="letter" id="letter2">
-                <div class="polaroid">
-                    <img src="your-photo-2.jpg" alt="Us Together">
-                </div>
-                <p>My dearest Swati,</p>
-                <p>Here is your love letter for Day 2...</p>
-            </div>
-            
             <div class="envelope" onclick="openLetter(3)">
-                <div class="heart">❤</div>
+                <div class="heart"></div>
                 <p>Day 3</p>
             </div>
-            <div class="letter" id="letter3">
-                <div class="polaroid">
-                    <img src="your-photo-3.jpg" alt="Us Together">
-                </div>
-                <p>My dearest Swati,</p>
-                <p>Here is your love letter for Day 3...</p>
-            </div>
-            
             <div class="envelope" onclick="openLetter(4)">
-                <div class="heart">❤</div>
+                <div class="heart"></div>
                 <p>Day 4</p>
             </div>
-            <div class="letter" id="letter4">
-                <div class="polaroid">
-                    <img src="your-photo-4.jpg" alt="Us Together">
-                </div>
-                <p>My dearest Swati,</p>
-                <p>Here is your love letter for Day 4...</p>
-            </div>
-            
             <div class="envelope" onclick="openLetter(5)">
-                <div class="heart">❤</div>
+                <div class="heart"></div>
                 <p>Day 5</p>
             </div>
-            <div class="letter" id="letter5">
-                <div class="polaroid">
-                    <img src="your-photo-5.jpg" alt="Us Together">
-                </div>
-                <p>My dearest Swati,</p>
-                <p>Here is your love letter for Day 5...</p>
-            </div>
-            
             <div class="envelope" onclick="openLetter(6)">
-                <div class="heart">❤</div>
+                <div class="heart"></div>
                 <p>Day 6</p>
             </div>
-            <div class="letter" id="letter6">
-                <div class="polaroid">
-                    <img src="your-photo-6.jpg" alt="Us Together">
-                </div>
-                <p>My dearest Swati,</p>
-                <p>Here is your love letter for Day 6...</p>
-            </div>
-            
             <div class="envelope" onclick="openLetter(7)">
-                <div class="heart">❤</div>
+                <div class="heart"></div>
                 <p>Day 7</p>
             </div>
-            <div class="letter" id="letter7">
-                <div class="polaroid">
-                    <img src="your-photo-7.jpg" alt="Us Together">
-                </div>
-                <p>My dearest Swati,</p>
-                <p>Here is your love letter for Day 7...</p>
-            </div>
-        </section>
-        
-        <footer>
-            <div class="music-player">
-                <button onclick="prevTrack()">⏮</button>
-                <button onclick="togglePlayPause()">▶️</button>
-                <button onclick="nextTrack()">⏭</button>
-                <audio id="audio-player">
-                    <source src="song1.mp3" type="audio/mp3">
-                </audio>
-            </div>
-        </footer>
+        </div>
+
+        <!-- Letters for each day -->
+        <div id="letter1" class="letter-content"> <div class="close" onclick="closeLetter(1)">&times;</div> <p>My dearest Swati, ...</p></div>
+        <div id="letter2" class="letter-content"> <div class="close" onclick="closeLetter(2)">&times;</div> <p>Day 2 letter ...</p></div>
+        <div id="letter3" class="letter-content"> <div class="close" onclick="closeLetter(3)">&times;</div> <p>Day 3 letter ...</p></div>
+        <div id="letter4" class="letter-content"> <div class="close" onclick="closeLetter(4)">&times;</div> <p>Day 4 letter ...</p></div>
+        <div id="letter5" class="letter-content"> <div class="close" onclick="closeLetter(5)">&times;</div> <p>Day 5 letter ...</p></div>
+        <div id="letter6" class="letter-content"> <div class="close" onclick="closeLetter(6)">&times;</div> <p>Day 6 letter ...</p></div>
+        <div id="letter7" class="letter-content"> <div class="close" onclick="closeLetter(7)">&times;</div> <p>Day 7 letter ...</p></div>
+    </div>
+    
+    <!-- Music Player -->
+    <div class="music-player">
+        <audio id="audio-player"></audio>
+        <button onclick="prevTrack()">⏮</button>
+        <button onclick="togglePlayPause()">▶</button>
+        <button onclick="nextTrack()">⏭</button>
     </div>
 </body>
 </html>
