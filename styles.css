@@ -1,75 +1,96 @@
-/* Add this file to the 'css' directory */
+/* Add this file to the 'css' directory as style.css */
 
 body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    font-family: 'Poppins', sans-serif;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
     text-align: center;
     padding: 20px;
+    color: #fff;
 }
 
-.container {
-    max-width: 800px;
-    margin: auto;
-    background: white;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+.title {
+    font-size: 36px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
 }
 
-header h1 {
-    color: #d63384;
+.love-timer {
+    font-size: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
 }
 
-.letters {
+.envelope-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
+    gap: 15px;
+    margin-top: 30px;
 }
 
 .envelope {
-    width: 100px;
+    width: 120px;
     height: 100px;
-    background: pink;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: url('envelope-closed.png') no-repeat center center;
+    background-size: cover;
     cursor: pointer;
     position: relative;
+    transition: transform 0.3s ease-in-out;
 }
 
-.envelope .heart {
-    font-size: 24px;
+.envelope:hover {
+    transform: scale(1.1);
+}
+
+.heart {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 26px;
     color: red;
 }
 
-.letter {
+.letter-content {
     display: none;
-    background: #fff;
-    padding: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    animation: fadeIn 1s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 500px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 18px;
 }
 
-.polaroid {
-    background: white;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    margin-bottom: 10px;
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
 }
 
 .music-player {
-    margin-top: 20px;
-    background: #fff;
-    padding: 10px;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
     border-radius: 10px;
     display: flex;
-    justify-content: center;
+    align-items: center;
     gap: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 button {
@@ -79,9 +100,4 @@ button {
     background: #d63384;
     color: white;
     border-radius: 5px;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
 }
